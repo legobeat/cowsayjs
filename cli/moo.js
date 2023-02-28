@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
-var cli = require(".");
+import cli from "./index.js";
 
 
 // Parse and execute arguments

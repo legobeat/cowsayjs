@@ -3,6 +3,8 @@
   "version": "2.0.0",
   "description": "A nodejs clone of the classic cowsay and cowthink cli commands",
   "main": "lib/index.js",
+  "type": "module",
+  "module": "es2022",
   "scripts": {
     "start": "cli/moo.js",
     "moo": "cli/moo.js",

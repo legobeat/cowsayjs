@@ -1,12 +1,12 @@
 "use strict";
 
-var assert = require("assert");
-var child_process = require("child_process");
+import assert from "assert";
+import { execSync } from "child_process";
 
-var lib = require("../lib");
-var box = require("../lib/box");
-var mode = require("../lib/mode");
-var cows = require("../cows");
+import lib from "../lib/index.js";
+import box from "../lib/box.js";
+import mode from "../lib/mode.js";
+import cows from "../cows/index.js";
 
 var env = process.env;
 
@@ -28,7 +28,7 @@ var COWTHINK = env.COWTHINK || "cowthink";
  * @returns {string} Command output or empty string if an error occours
  */
 function cli(command) {
-  return child_process.execSync(command + " 2>/dev/null").toString();
+  return execSync(command + " 2>/dev/null").toString();
 }
 
 /**
