@@ -1,11 +1,12 @@
 "use strict";
 
-var fs = require("fs");
-var path = require("path");
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-var lib = require("../lib");
-var mode = require("../lib/mode");
-var cows = require("../cows");
+import lib from "../lib/index.js";
+import mode from "../lib/mode.js";
+import cows from "../cows/index.js";
 
 
 /**
@@ -40,7 +41,7 @@ var cows = require("../cows");
  * @type {Record<string, string | string[] | Record<string, string>>}
  * @package
  */
-var package_json = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "package.json"), "utf8"));
+var package_json = JSON.parse(fs.readFileSync(path.join(fileURLToPath(import.meta.url), "..", "..", "package.json"), "utf8"));
 
 
 /**
@@ -311,6 +312,6 @@ function exec(action) {
  *
  * @module cowsayjs/cli
  */
-module.exports = {
+export default {
   exec: exec
 };

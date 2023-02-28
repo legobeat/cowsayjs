@@ -1,7 +1,7 @@
 "use strict";
 
 /** @type {import(".").Cow} */
-module.exports = {
+export default {
   name: "moofasa",
   template: [
     "       \\    ____",
