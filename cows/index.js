@@ -64,69 +64,131 @@ import utils from "../lib/utils.js";
  * @constant
  * @package
  */
-const corral = (await Promise.all([
-  "./default.cow",
-  "./apt.cow",
-  "./beavis.zen.cow",
-  "./blowfish.cow",
-  "./bong.cow",
-  "./bud-frogs.cow",
-  "./bunny.cow",
-  "./calvin.cow",
-  "./cheese.cow",
-  "./cock.cow",
-  "./cower.cow",
-  "./daemon.cow",
-  "./dragon-and-cow.cow",
-  "./dragon.cow",
-  "./duck.cow",
-  "./elephant-in-snake.cow",
-  "./elephant.cow",
-  "./eyes.cow",
-  "./flaming-sheep.cow",
-  "./fox.cow",
-  "./ghostbusters.cow",
-  "./gnu.cow",
-  "./head-in.cow",
-  "./hellokitty.cow",
-  "./kangaroo.cow",
-  "./kiss.cow",
-  "./kitty.cow",
-  "./koala.cow",
-  "./kosh.cow",
-  "./luke-koala.cow",
-  "./mech-and-cow.cow",
-  "./meow.cow",
-  "./milk.cow",
-  "./moofasa.cow",
-  "./moose.cow",
-  "./mutilated.cow",
-  "./pony-smaller.cow",
-  "./pony.cow",
-  "./ren.cow",
-  "./satanic.cow",
-  "./sheep.cow",
-  "./skeleton.cow",
-  "./small.cow",
-  "./snowman.cow",
-  "./sodomized.cow",
-  "./stegosaurus.cow",
-  "./stimpy.cow",
-  "./supermilker.cow",
-  "./surgery.cow",
-  "./suse.cow",
-  "./telebears.cow",
-  "./three-eyes.cow",
-  "./turkey.cow",
-  "./turtle.cow",
-  "./tux.cow",
-  "./udder.cow",
-  "./unipony-smaller.cow",
-  "./unipony.cow",
-  "./vader-koala.cow",
-  "./vader.cow",
-  "./www.cow"
-].map(p => import(p+'.js')))).map(m => m.default);
+import defaultCow from './default.cow.js'
+import aptCow from './apt.cow.js'
+import beavisCow from './beavis.zen.cow.js'
+import blowfishCow from './blowfish.cow.js'
+import bongCow from './bong.cow.js'
+import budfrogsCow from './bud-frogs.cow.js'
+import bunnyCow from './bunny.cow.js'
+import calvinCow from './calvin.cow.js'
+import cheeseCow from './cheese.cow.js'
+import cockCow from './cock.cow.js'
+import cowerCow from './cower.cow.js'
+import daemonCow from './daemon.cow.js'
+import dragonandcowCow from './dragon-and-cow.cow.js'
+import dragonCow from './dragon.cow.js'
+import duckCow from './duck.cow.js'
+import elephantinsnakeCow from './elephant-in-snake.cow.js'
+import elephantCow from './elephant.cow.js'
+import eyesCow from './eyes.cow.js'
+import flamingsheepCow from './flaming-sheep.cow.js'
+import foxCow from './fox.cow.js'
+import ghostbustersCow from './ghostbusters.cow.js'
+import gnuCow from './gnu.cow.js'
+import headinCow from './head-in.cow.js'
+import hellokittyCow from './hellokitty.cow.js'
+import kangarooCow from './kangaroo.cow.js'
+import kissCow from './kiss.cow.js'
+import kittyCow from './kitty.cow.js'
+import koalaCow from './koala.cow.js'
+import koshCow from './kosh.cow.js'
+import lukekoalaCow from './luke-koala.cow.js'
+import mechandcowCow from './mech-and-cow.cow.js'
+import meowCow from './meow.cow.js'
+import milkCow from './milk.cow.js'
+import moofasaCow from './moofasa.cow.js'
+import mooseCow from './moose.cow.js'
+import mutilatedCow from './mutilated.cow.js'
+import ponysmallerCow from './pony-smaller.cow.js'
+import ponyCow from './pony.cow.js'
+import renCow from './ren.cow.js'
+import satanicCow from './satanic.cow.js'
+import sheepCow from './sheep.cow.js'
+import skeletonCow from './skeleton.cow.js'
+import smallCow from './small.cow.js'
+import snowmanCow from './snowman.cow.js'
+import sodomizedCow from './sodomized.cow.js'
+import stegosaurusCow from './stegosaurus.cow.js'
+import stimpyCow from './stimpy.cow.js'
+import supermilkerCow from './supermilker.cow.js'
+import surgeryCow from './surgery.cow.js'
+import suseCow from './suse.cow.js'
+import telebearsCow from './telebears.cow.js'
+import threeeyesCow from './three-eyes.cow.js'
+import turkeyCow from './turkey.cow.js'
+import turtleCow from './turtle.cow.js'
+import tuxCow from './tux.cow.js'
+import udderCow from './udder.cow.js'
+import uniponysmallerCow from './unipony-smaller.cow.js'
+import uniponyCow from './unipony.cow.js'
+import vaderkoalaCow from './vader-koala.cow.js'
+import vaderCow from './vader.cow.js'
+import wwwCow from './www.cow.js'
+
+const corral = [
+  defaultCow,
+  aptCow,
+  beavisCow,
+  blowfishCow,
+  bongCow,
+  budfrogsCow,
+  bunnyCow,
+  calvinCow,
+  cheeseCow,
+  cockCow,
+  cowerCow,
+  daemonCow,
+  dragonandcowCow,
+  dragonCow,
+  duckCow,
+  elephantinsnakeCow,
+  elephantCow,
+  eyesCow,
+  flamingsheepCow,
+  foxCow,
+  ghostbustersCow,
+  gnuCow,
+  headinCow,
+  hellokittyCow,
+  kangarooCow,
+  kissCow,
+  kittyCow,
+  koalaCow,
+  koshCow,
+  lukekoalaCow,
+  mechandcowCow,
+  meowCow,
+  milkCow,
+  moofasaCow,
+  mooseCow,
+  mutilatedCow,
+  ponysmallerCow,
+  ponyCow,
+  renCow,
+  satanicCow,
+  sheepCow,
+  skeletonCow,
+  smallCow,
+  snowmanCow,
+  sodomizedCow,
+  stegosaurusCow,
+  stimpyCow,
+  supermilkerCow,
+  surgeryCow,
+  suseCow,
+  telebearsCow,
+  threeeyesCow,
+  turkeyCow,
+  turtleCow,
+  tuxCow,
+  udderCow,
+  uniponysmallerCow,
+  uniponyCow,
+  vaderkoalaCow,
+  vaderCow,
+  wwwCow,
+];
 
 /**
  * Custom cows list
